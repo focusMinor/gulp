@@ -1,0 +1,65 @@
+@use "sass:math";
+
+@import "common/functions";
+
+$fontFamily: "";
+$fontSize: rem(16);
+
+$mainColor: #000;
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1270;
+$containerPadding: 30;
+$responsiveType: 1;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+// &display=swap - добавить при 	подключение через плагин
+
+// @import "fonts/fonts";
+// @import "fonts/icons";
+
+@import "common/normalize";
+
+body {
+   font-size: $fontSize;
+   &.lock {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   > main {
+      flex: 1 1 auto;
+   }
+   > * {
+      min-width: 0;
+   }
+}
+
+[class*="__container"] {
+   max-width: rem($maxWidthContainer);
+   box-sizing: content-box;
+   margin: 0 auto;
+   padding: 0 rem(math.div($containerPadding, 2));
+}
+
+@import "common/ui";
+@import "common/forms";
+
+@import "header";
+@import "footer";
+
+@import "home";

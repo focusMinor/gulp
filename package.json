@@ -1,0 +1,35 @@
+{
+	"name": "gulp",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"build": "gulp build --build",
+		"svg": "gulp svgSprive"
+	},
+	"dependencies": {
+		"gulp-cli": "latest"
+	},
+	"devDependencies": {
+		"browser-sync": "latest",
+		"del": "latest",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-clean-css": "latest",
+		"gulp-file-include": "latest",
+		"gulp-fonter": "latest",
+		"gulp-group-css-media-queries": "latest",
+		"gulp-if": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-newer": "latest",
+		"gulp-notify": "latest",
+		"gulp-rename": "latest",
+		"gulp-replace": "latest",
+		"gulp-rollup": "latest",
+		"gulp-sass": "latest",
+		"gulp-svg-sprite": "latest",
+		"gulp-ttf2woff2": "latest",
+		"gulp-uglify": "latest",
+		"gulp-version-number": "latest",
+		"sass": "latest"
+	}
+}

@@ -1,0 +1,29 @@
+@function rem($px) {
+   $result: math.div($px, 16) + rem;
+   @return $result;
+}
+
+@function em($px) {
+   $result: math.div($px, 16) + em;
+   @return $result;
+}
+
+@function calcFluid($max, $min, $maxWidth: 1920, $minWidth: 320) {
+   $k: toFixed(math.div(($max - $min), ($maxWidth - $minWidth)));
+   $b: toFixed(math.div($min - $k * $minWidth, 16)) + rem;
+   @return calc(#{$k * 100vw} + #{$b});
+}
+
+@function toFixed($float, $digits: 4) {
+   $pow: pow(10, $digits);
+   $fixed: math.div(round($float * $pow), $pow);
+   @return $fixed;
+}
+
+@function pow($base, $exponents) {
+   $raised: 1;
+   @for $i from 1 through $exponents {
+      $raised: $raised * $base;
+   }
+   @return $raised;
+}

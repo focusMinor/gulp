@@ -4,7 +4,8 @@
 	"type": "module",
 	"scripts": {
 		"build": "gulp build --build",
-		"svg": "gulp svgSprive"
+		"svg": "gulp svgSprive",
+		"fonts": "gulp fonts"
 	},
 	"dependencies": {
 		"gulp-cli": "latest"

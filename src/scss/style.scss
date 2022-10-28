@@ -1,18 +1,17 @@
 @use "sass:math";
 
-@import "common/functions";
+@import "base/functions";
 
-$fontFamily: "";
+$fontFamily: "Golos";
 $fontSize: rem(16);
 
 $mainColor: #000;
 
 $minWidth: 320;
 $maxWidth: 1920;
-$maxWidthContainer: 1270;
-$containerPadding: 30;
-$responsiveType: 1;
-
+$maxWidthContainer: 1370;
+$maxWidthContainerLarge: 1570;
+$containerPadding: 20;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 $pc: em($containerWidth);
@@ -25,10 +24,11 @@ $mobileSmall: em(479.98);
 // @import "fonts/fonts";
 // @import "fonts/icons";
 
-@import "common/normalize";
+@import "base/reset";
 
 body {
    font-size: $fontSize;
+   font-family: $fontFamily;
    &.lock {
       overflow: hidden;
       touch-action: none;
@@ -41,6 +41,7 @@ body {
    overflow: hidden;
    display: flex;
    flex-direction: column;
+   background-color: #000;
    > main {
       flex: 1 1 auto;
    }
@@ -53,10 +54,7 @@ body {
    padding: 0 rem(math.div($containerPadding, 2));
 }
 
-@import "common/ui";
-@import "common/forms";
-
+@import "common";
 @import "header";
 @import "footer";
-
 @import "home";

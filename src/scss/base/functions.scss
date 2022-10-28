@@ -1,11 +1,9 @@
 @function rem($px) {
-   $result: math.div($px, 16) + rem;
-   @return $result;
+   @return math.div($px, 16) + rem;
 }
 
 @function em($px) {
-   $result: math.div($px, 16) + em;
-   @return $result;
+   @return math.div($px, 16) + em;
 }
 
 @function calcFluid($max, $min, $maxWidth: 1920, $minWidth: 320) {
@@ -16,8 +14,7 @@
 
 @function toFixed($float, $digits: 4) {
    $pow: pow(10, $digits);
-   $fixed: math.div(round($float * $pow), $pow);
-   @return $fixed;
+   @return math.div(round($float * $pow), $pow);
 }
 
 @function pow($base, $exponents) {
@@ -26,4 +23,8 @@
       $raised: $raised * $base;
    }
    @return $raised;
+}
+
+@function lineHeight($fs, $ln) {
+   @return toFixed(math.div($fs, $ln), 3);
 }

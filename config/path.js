@@ -1,7 +1,6 @@
 import * as nodePath from 'path';
-const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = rootFolder;
+const buildFolder = nodePath.basename(nodePath.resolve());
 const srcFolder = `./src`;
 
 export const path = {
@@ -18,18 +17,17 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/style.scss`,
-		html: `${srcFolder}/*.html`,
+		html: `${srcFolder}/*.{html, htm}`,
 		static: `${srcFolder}/static/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
 		scss: `${srcFolder}/scss/**/*.scss`,
-		html: `${srcFolder}/**/*.html`,
+		html: `${srcFolder}/**/*.{html, htm}`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		static: `${srcFolder}/static/**/*.*`
 	},
-	rootFolder,
 	srcFolder,
 	buildFolder,
 }

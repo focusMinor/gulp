@@ -15,7 +15,7 @@ export const js = () => {
             },
          })
       )
-      .pipe(app.plugins.ifPlugin(app.isBuild, uglify()))
+      // .pipe(app.plugins.ifPlugin(app.isBuild, uglify()))
       .pipe(app.gulp.dest(app.path.build.js))
       .pipe(app.plugins.browsersync.stream());
 };
